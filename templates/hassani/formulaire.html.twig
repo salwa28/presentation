@@ -1,0 +1,177 @@
+{% extends 'base.html.twig' %}
+{% block title %}Formulaire{% endblock %}
+
+{% block body %}
+<div class="container" id=" formul">
+             <h1 class="ts">Formulaire de téléchargement</h1>
+             <form id="inscription">
+             
+               <fieldset> 
+               <p>
+               <input type="radio" id="sexe" value="h" checked="checked">
+               <label for="sex"> Homme</label> 
+               <input type="radio"  id="sexe" value="f" checked="checked">
+               <label for="sex"> Femme</label> 
+               </p>
+               
+                 <div class="form-group">
+                   <label class="td" for="nom" >Nom</label>
+                   <input type="text"  class="form-control" id="inputFieldId"  placeholder="ex: ASSANI Moulin" required >
+                   <div class="erreur">*</div>
+                 </div>
+
+                 <div class="form-group">
+                   <label class="poot" for="number" >Numéro</label>
+                   <input  class="form-control" id="inputFieldId" type="text" pattern="[0-9]+" placeholder="ex: 07" required >
+                   <div class="erreur">*</div>
+                 </div>
+                 
+                 <div class="form-group">
+                   <label class="lid" for="email"  >Mail</label>
+                   <input type="email"  class="form-control" id="inputFieldId"  placeholder=" ex: assani.giscar@etc.com" required>
+                   <div class="erreur">*</div>
+                 </div>
+                  <div class="form-group">
+                   <label class="lid" for="email">Confirmation Mail</label>
+                   <input type="email"  class="form-control" id="inputFieldId"  placeholder=" ex: assani.giscar@etc.com" required>
+                   <div class="erreur">*</div>
+                 </div>
+                 <div class="form-group">
+                   <label class="titi" for="nom" >Nom d'entreprise</label>
+                   <input type="text"  class="form-control" id="inputFieldId"  placeholder="ex: Picard">
+                 </div>
+                <div class="form-group">
+                   <label class="td" for="nom" >Pays</label>
+                   <input type="text"  class="form-control" id="inputFieldId"  placeholder="ex: France" required >
+                   
+                 </div>
+                 <div class="form-group">
+                   <label class="td" for="nom" >Ville</label>
+                   <input type="text"  class="form-control" id="inputFieldId"  placeholder="ex: Roanne" required >
+                   
+                 </div>
+                 <div class="form-group">
+                   <label class="tart" for="selection">selectionner une page</label>
+                   <select id="selection" class="form-control">
+                     <option value="">Liste de choix...</option>
+                     <optgroup label="Groupe d'options 1">
+                       <option value="">CV</option>
+                       <option value="">Portfolio</option>
+                       <option value="">Accueil</option>
+                   </select>
+                 </div>
+                 <div class="form-group">
+                   <label class="cool" color="white" for="bio">Message</label>
+                   <textarea class="form-control" id="bio" rows="3"></textarea>
+                 </div>
+               </fieldset>
+                <input type="submit"  value="Télécharger">
+             </form>
+         </div>
+         <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">BUT R&T 2022-2023, Salwa-assani</div></div>
+        </footer>  
+         <style> 
+         body {
+    background-attachment:fixed;
+    background-image:url('https://cdn.pixabay.com/photo/2018/09/19/23/03/sunset-3689760_960_720.jpg');
+    background-size: cover;
+ 
+}
+h1,label{
+    color: white;
+}
+         
+         .container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#formul {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.ts {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.erreur {
+  color: red;
+}
+
+#inscription {
+  text-align: center;
+}
+
+input[type="submit"] {
+  width: 25%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+         
+  footer{
+    background-color:rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align:center;
+}      
+         
+         </style>
+         
+         <script>
+          document.forms["inscription"].addEventListner("submit", fonction(e)) {
+         
+          var erreur;
+          var inputs= this;
+
+          for (var i=0; i< inputs.length; i++) {
+            console.log(intputs[i]);
+            if (!inputs[i].value) {
+              erreur="Veuillez remplir tous les champs";
+            }
+
+            }
+           if (erreur) {
+            e.preventDefault();
+            document.getElementById("erreur").innerHTML= erreur;
+            return false;
+
+           } else {
+             alert('Formulaire validé !')
+           }
+
+
+          });
+         
+          </script>
+
+
+
+{% endblock %}
