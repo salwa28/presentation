@@ -5,6 +5,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -14,6 +15,65 @@
         {% endblock %}
     </head>
     <body>
+    <nav>
+        <img src="https://manage.wix.com/_serverless/brand-maker/api/v1/design/c873962a-5445-450e-bd3d-bcd2af4eb313/preview-redirect?preset=thumbnail" class="logo" alt="logo du site">
+        <ul> 
+            <li> <a href="/hassani">Accueil</a></li>
+        </ul>
+    </nav>
+    <style> 
+   
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4px 0;
+}
+
+nav .logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content:flex-end;
+    flex: 1;
+    padding-right: 40px;
+    text-align: right;
+    list-style-type: none ;
+}
+
+ul li{
+    margin-right: 10px;
+
+}
+
+ul li a{
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16pxs;
+}
+
+ul li a::after {
+   content: '';
+   background: orange;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 0;
+   height: 3px;
+   transform: translate(-50%, -5px);
+   transition: 0.3s;
+}
+ul li a:hover::after {
+    width: 38%;
+}
+   
+    </style>
         {% block body %}{% endblock %}
     </body>
 </html>
