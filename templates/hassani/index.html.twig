@@ -1,0 +1,177 @@
+{% block title %}Accueil!{% endblock %}
+
+ {% block body %}
+
+
+<div class="debut">
+        <nav>
+        <img src="https://manage.wix.com/_serverless/brand-maker/api/v1/design/c873962a-5445-450e-bd3d-bcd2af4eb313/preview-redirect?preset=thumbnail" class="logo" alt="logo du site">
+        <ul> 
+            <li> <a href="/hassani/portfolio">Portfolio</a></li>
+            <li> <a href="/hassani/formulaire">Formulaire</a></li>
+            <li> <a href="/hassani/cv">CV</a></li>
+        </ul>
+    </nav>
+    <div class="site">
+        <p>Bienvenue sur mon site .... </p>
+         <h1> Transformez votre entreprise avec les dernières technologies réseaux <br> et télécoms pour une communication fluide et efficace</h1>
+         <div class="bas">
+            <span> 
+               But réseaux et télécoms<br>
+               Salwa@gmail.com <br>
+            </span>
+
+            <a href="/hassani/loisirs">Pour en savoir plus</a>
+         </div>
+       
+    </div>
+   
+
+<style type="text/css"> 
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: sans-serif;
+}
+body {
+    position: relative;
+    height: 100vh;
+    background-attachment:fixed;
+    background-image:url('https://cdn.pixabay.com/photo/2018/09/19/23/03/sunset-3689760_960_720.jpg');
+    background-size: cover;
+    padding: 0 8%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4px 0;
+}
+
+nav .logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content:flex-end;
+    flex: 1;
+    padding-right: 40px;
+    text-align: right;
+    list-style-type: none ;
+}
+
+ul li{
+    margin-right: 10px;
+
+}
+
+ul li a{
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16pxs;
+}
+
+ul li a::after {
+   content: '';
+   background: orange;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 0;
+   height: 3px;
+   transform: translate(-50%, -5px);
+   transition: 0.3s;
+}
+ul li a:hover::after {
+    width: 38%;
+}
+
+.site {
+    position: absolute;
+    bottom: 10%;
+    color: white;
+}
+
+.site p{
+    font-size: 50px;
+    font-weight: boid;
+
+}
+.site h1{
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px blue;
+   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlcAAABICAMAAADs+iDRAAAAZlBMVEUAAAD////z8/Pk5OTV1dXS0tKTk5P29vb5+fnh4eFpaWkzMzPZ2dmLi4t9fX2xsbG4uLhdXV2lpaXDw8N0dHRUVFQPDw8oKCjCwsJBQUGXl5fKyspNTU3s7OwdHR2vr68WFhZlZWVEOQMaAAACQUlEQVR4nO3Sy1rCQBCE0S4voAgKeAEBRd7/JZ1kOlZ/7N39tYDImMmk+oT0FEutIuJZLZF50ToWymzaD1u9xlXepvX3OGobq3Z101eWuXAbH95yprvhS9q1z71KPuNeszj0PyIe2oZTnur/HdsPH8PFKTfMG+btc3qDh2Hla1x4aSf86ts85g7LfgJpEes8YclsetCuVtJPGOMN9/3+79xwHxeXtta5bnbUoX0uhkqGjq8ynPAwXn32V97kwkbzfnE3vkFGWclqeuXe8dknPLUO5RNeZXjgoi0cWoenaWgR5/HqZnrKPt/gpw5NQ4dWID3Gzuslt21t274v44a4cnCFq8AVrvKIuPoLroQrXFkBrnDl4ApXuJrWcRWBK1wJV7gqwRWucmq4wpUrwhWuXAmuhCtcObjCVQmucFWCK+EKVyW4wlVODVe4ckW4wpUrwZVwhSsHV7gqwRWuSnAlXOGqBFe4yqnhCleuCFe4ciW4Eq5w5eAKVyW4wlUJroQrXJXgClc5NVzhyhXhCleuBFfCFa4cXOGqBFe4KsGVcIWrElzhKqeGK1y5IlzhypXgSrjClYMrXJXgClcluBKucFWCK1zl1HCFK1eEK1y5ElwJV7hycIWrElzhqgRXwhWuSnCFq5warnDlinCFK1eCK+EKVw6ucFWCK1yV4Eq4wlUJrnCVU8MVrlwRrnDlSnAlXOHKwRWuSnCFqxJcCVe4KsEVrnJquMKVK8IVrlwJroQrXDm4wlUJrnBVgivh6r9d/QIF6innBXg3VwAAAABJRU5ErkJggg==');
+   -webkit-background-clip: text;
+   background-position: 0 0;
+   animation: animate 20s linear 2s infinite alternate;
+}
+
+@keyframes animate {
+    100%{
+        background-position: -500px 0;
+    }
+     
+}
+
+.site h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+.site .bas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.bas a{
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    margin-right: 40px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.bas a:hover{
+   background-color: white;
+   color:blue;
+}
+.bas span{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:10px ;
+    line-height: 2;
+}
+.triche{
+    position: absolute;
+    bottom: 8%;
+    right: -800px;
+}
+.triche a{
+    padding:0;
+    margin-right: 0;
+}
+footer{
+    background-color:rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align:center;
+}
+
+</style>
+
+{% endblock %}
