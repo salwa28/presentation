@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+{% block title %}loisirs{% endblock %}
+
+{% block body %}
+<div class="sartp">
+ <div class="imag-container">
+  <img src="https://cdn.pixabay.com/photo/2017/04/25/05/45/basketball-2258651_960_720.jpg" alt="photo de football">
+</div>
+
+<div class="imag-container music">
+  <img src="https://cdn.pixabay.com/photo/2020/09/16/10/17/dancer-5576002_960_720.jpg" alt="photo de music">
+</div>
+
+<div class="imag-container  nation">
+  <img src="https://cdn.pixabay.com/photo/2017/08/06/21/38/green-2596624_960_720.jpg" alt="photo de nation">
+</div>
+
+<div class="imag-container mangas-animé">
+  <img src="https://cdn.pixabay.com/photo/2015/01/11/07/08/moe-595961_960_720.jpg" alt="photo de mangas animé">
+</div>
+<div class="imag-container">
+  <img src="https://cdn.pixabay.com/photo/2015/05/10/21/16/board-761586_960_720.jpg" alt="photo de jeux de société">
+</div>
+
+<div class="imag-container jeux-vidéo">
+  <img src="https://cdn.pixabay.com/photo/2021/09/07/07/11/joysticks-6603119_960_720.jpg" alt="photo de jeux vidéo">
+</div>
+
+</div>
+
+
+<style type="text/css"> 
+body {
+    background-attachment:fixed;
+    background-image:url('https://cdn.pixabay.com/photo/2018/09/19/23/03/sunset-3689760_960_720.jpg');
+    background-size: cover;
+ 
+}
+.imag-container {
+  width: 930px;
+  height: 600px;
+  overflow: hidden;
+ 
+}
+
+.imag-container img {
+  width: 100%;
+  height: auto;
+ 
+}
+.music , .mangas-animé , .jeux-vidéo {
+  float: right;
+
+}
+
+footer{
+    background-color:rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align:center;
+}
+
+</style>
+
+
+{% endblock %}
